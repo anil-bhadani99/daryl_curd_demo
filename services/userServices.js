@@ -1,6 +1,5 @@
 var { user } = require('../models/user')
 var mongoose = require('mongoose')
-var serviceHelper = require('../helpers/serviceHelper')
 var { setJwtToken } = require('../middleware/jwtAuth')
 var bcrypt = require('bcryptjs')
 
@@ -92,7 +91,7 @@ exports.deleteUser = async (id) => {
 
 exports.editUser = async (condition, data) => {
   try {
-    return await serviceHelper.update(user, condition, data)
+    return await user.updateOne(condition, data)
   } catch (err) {
     console.log('err : ', err)
     return false
@@ -121,4 +120,3 @@ exports.getAllUser = async () => {
     return false
   }
 }
-

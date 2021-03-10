@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "b0c972cf-2ec8-4b4c-8f8b-d70f04a13f0d",
+		"name": "Daryl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "API/V1",
+					"item": [
+						{
+							"name": "localhost:4000/editUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNDc2YWIzMWYzMmQyMjEzODRjZjc5OCJ9LCJpYXQiOjE2MTUyOTMyNzF9.__d5jI6iKc0pmk_rg26A76PEIPwQ65jaV0YR0V_XSFo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"60476ab31f32d221384cf798\",\r\n    \"name\": \"Anil\",\r\n    \"surname\" : \"Bhadani\",\r\n    \"occupation\" : \"ITTTT\",\r\n    \"email\" : \"aniL@gmail.comm\",\r\n    \"password\" : \"Admin123#\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/editUser",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"editUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:4000/api/v1/deleteUser",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNDc2YWIzMWYzMmQyMjEzODRjZjc5OCJ9LCJpYXQiOjE2MTUyOTMyNzF9.__d5jI6iKc0pmk_rg26A76PEIPwQ65jaV0YR0V_XSFo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"60476ab31f32d221384cf798\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/deleteUser",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"deleteUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "localhost:4000/api/v1/getAllUser",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNDc2YWIzMWYzMmQyMjEzODRjZjc5OCJ9LCJpYXQiOjE2MTUyOTMyNzF9.__d5jI6iKc0pmk_rg26A76PEIPwQ65jaV0YR0V_XSFo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:4000/api/v1/getAllUser",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"getAllUser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "localhost:4000/addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Anil\",\r\n    \"surname\" : \"Bhadani\",\r\n    \"occupation\" : \"IT\",\r\n    \"email\" : \"aniL@gmail.comm\",\r\n    \"password\" : \"Admin123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/auth/signUp",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:4000/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"aniL@gmail.comm\",\r\n    \"password\" : \"Admin123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
